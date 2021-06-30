@@ -23,10 +23,6 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerJDOC = require("swagger-jsdoc");
 swaggerDocument = require("./swagger.json");
 var fireadmin = require("firebase-admin");
-var serviceAccount = require("./firebase/push_admin_sdk.json");
-fireadmin.initializeApp({
-  credential: fireadmin.credential.cert(serviceAccount)
-});
 var server;
 
 var options = {
